@@ -19,11 +19,20 @@
         "account": "name",
         "balance": "uint64"
       }
+    },
+    {
+      "name": "greatings",
+      "base": "",
+      "fields": {}
     }
   ],
   "actions": [{
       "action_name": "transfer",
       "type": "transfer"
+    },
+    {
+      "action_name": "greatings",
+      "type": "greatings"
     }
   ],
   "tables": [{

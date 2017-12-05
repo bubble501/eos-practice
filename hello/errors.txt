@@ -1,0 +1,12 @@
+Jon-Erics-MacBook-Pro:eosc joneric$ ./eosc push message hello greatings '{}' --scope hello,inita --permission hello@active
+2375917ms thread-0   main.cpp:1050                 operator()           ] Converting argument to binary...
+2376580ms thread-0   main.cpp:1117                 main                 ] Failed with error: 10 assert_exception: Assert Exception
+status_code == 200: Error code 400
+: {"code":400,"message":"Bad Request","details":"irrelevant authority included (3030003)\nMessage declared authorities it did not need: [{\"account\":\"hello\",\"permission\":\"active\"}]\n\n\n\n"}
+
+    {"c":400,"msg":"{\"code\":400,\"message\":\"Bad Request\",\"details\":\"irrelevant authority included (3030003)\\nMessage declared authorities it did not need: [{\\\"account\\\":\\\"hello\\\",\\\"permission\\\":\\\"active\\\"}]\\n\\n\\n\\n\"}"}
+    thread-0  httpc.cpp:113 call
+
+    {"server":"localhost","port":8888,"path":"/v1/chain/push_transaction","postdata":{"ref_block_num":1045,"ref_block_prefix":1518667750,"expiration":"2017-12-05T18:40:06","scope":["hello","inita"],"read_scope":[],"messages":[{"code":"hello","type":"greatings","authorization":[{"account":"hello","permission":"active"}],"data":""}],"signatures":["1f24257ba90775a0dd1e4bb2d69cad8fcf6c56bc7acd44c06bf20a7c70d8db6b0e01d66017aa965ee70d67ed58dcdfc4a5ce5b1a2cc04f299163c4badffd93a10b"]}}
+    thread-0  httpc.cpp:117 call
+Jon-Erics-MacBook-Pro:eosc joneric$ 
